@@ -35,6 +35,12 @@ it looks for the presence of:
 - `MONGO_URL` - the Mongo URL connection string
 - `SLACK_URL` - the Slack URL to hit with the results
 
+## Running it locally
+- If using NVM, run `nvm use`
+- Then `npm install`
+- Make sure your environment variables are set
+- Run `node server.js`, which will run a server at port 5000
+
 ## Testing Auth'd Pages
 The current implementation is specific to Givewith's login -> redirect mechanism. If your setup is different, you
 may need to modify the `login` function in audit.js.
