@@ -56,3 +56,22 @@ through and then sequentially passed into the audit URL. We currently have this 
 ## Other cool features
 It'll post to Slack! At the end of `runaudits.js`, it keeps track of each profile and associated score
 and posts it to a Slack channel.
+
+## What's not in here
+Deployment! At Givewith, we're an AWS shop, so our deployment scripts pick up changes to the `main` branch and deploy
+via CodeDeploy, but you should be able to utilize your existing deployment process to deploy these files to a server/instance
+and initiate a server. Our deploy script looks roughly like this:
+```
+npm install -g pm2 -f
+
+echo 'pm2 installed globally'
+
+npm install
+
+echo 'dependencies installed'
+
+echo 'starting server'
+
+pm2 reload ecosystem.config.js
+
+```
