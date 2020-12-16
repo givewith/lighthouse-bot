@@ -1,6 +1,6 @@
 # Givewith Lighthouse Bot
 
-This repo contains scripts that will Givewith uses to programmatically run a Lighthouse audits. It supports testing authenticated pages,
+This repo contains scripts that Givewith uses to programmatically run Lighthouse audits. It supports testing authenticated pages,
 which can be configured by specifying a `login_url`, `username`, and `password` in the config object. If specified, the script will
 first login to the specified URL with the username and password, then run the Lighthouse audit on the page URL. if `login_url` is omitted,
 the Lighthouse audit will run on `page_url` without any login process. Configuration is specified via "profiles", set in the config object. See below.
